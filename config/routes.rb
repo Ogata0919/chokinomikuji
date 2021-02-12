@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'main/index'
+  devise_for :users
   root to: "main#index"
+  resources :main, only: [:index, :new]
+  resources :users, only: [:edit, :update]
 
 end

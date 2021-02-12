@@ -1,5 +1,8 @@
 class MainController < ApplicationController
   def index
+  end
+
+  def new
     kuji = rand(9)
     case kuji
     when 0
