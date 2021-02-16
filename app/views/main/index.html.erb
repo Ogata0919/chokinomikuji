@@ -4,7 +4,7 @@
       毎日の楽しみが増える貯金おみくじアプリ
     </h2>
     <p class='service-explain'>
-      貯金おみくじは１日1回引くことができる
+      貯金記録を残そう！！
     </p>
     <p class='service-explain'>
       貯まったお金で旅行しよう！
@@ -21,7 +21,10 @@
  <%= link_to(new_main_path, class: 'omikuji-btn') do %>
   <button class='omikuji-btn-text'>おみくじを引いてみる</button>
  <% end %> 
- <%= link_to("/main/#{current_user.id}", class: 'chokinomikuji-btn') do %>
- <button class='chokijiomikuji-btn', id="kekka_btn">結果一覧</button>  
-<%end%>
+ <%= link_to(blogs_path, class: 'chokinomikuji-btn') do %>
+ <button class='chokijiomikuji-btn', id="kekka_btn">貯金記録</button>  
+ <%end%>
+ <%= link_to(messages_new_path, class: 'chokinomikuji-btn') do %>
+ <button class='chokijiomikuji-btn', id="kekka_btn">なんでもメモ</button>  
+ <%end%>
 </div>
