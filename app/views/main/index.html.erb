@@ -18,7 +18,10 @@
  <div class='second-contents'>
       <%= image_tag "buta_san.png", class:"list-pict" %>
  </div>
- <div class='omikuji-btn'>
-    <a class="post" href="#">おみくじを引く</a>  
- </div>   
+ <%= link_to(new_main_path, class: 'omikuji-btn') do %>
+  <button class='omikuji-btn-text'>おみくじを引いてみる</button>
+ <% end %> 
+ <%= link_to("/main/#{current_user.id}", class: 'chokinomikuji-btn') do %>
+ <button class='chokijiomikuji-btn', id="kekka_btn">結果一覧</button>  
+<%end%>
 </div>

@@ -15,7 +15,13 @@
         <h1 class="grid-6"><a href="/">貯金おみくじ</a></h1>
         <% if user_signed_in? %>
             <div class="user_nav grid-6">
-              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+              <span><%= current_user.name %>
+                 <ul class="user__info">
+                   <li>
+                     <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+                   </li>
+                 </ul>
+               </span>       
             </div> 
         <% else %> 
             <div class="grid-6">    

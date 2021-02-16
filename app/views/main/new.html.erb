@@ -1,6 +1,33 @@
-<div class="contents row">
-  <div class="container">
-    <h1>あなたの今日の貯金額は<%= @message %>円です！</h1> 
-    <%= @cdate %>
-  </div>
+<div class='second-contents'>
+    <%= image_tag "buta_san.png", class:"list-pict" %>
 </div>
+<button class='chokinomikuji-btn', id="btn">おみくじスタート</button>  
+  <%= link_to("/main/#{current_user.id}", class: 'chokinomikuji-btn') do %>
+     <button class='chokijiomikuji-btn'>結果入力</button>
+  <%end%>
+<div id="disp"></div>  
+
+<div class='omikuji-contents'>
+<div id="disp"></div> 
+ <script>
+     var omikuji_items = [ "1000円！！！", "500円！！！", "100円！！！", "50円！！！", "10円！！！", "5円！！！"];
+     var btn =document.getElementById("btn");
+     var disp = document.getElementById("disp");
+     var num = 0;
+
+     btn.addEventListener("click",function(){
+         var num = Math.floor(Math.random() * omikuji_items.length);
+         var result = omikuji_items[num];
+         disp.innerHTML = result;
+
+         if(result == "1000円！！！"){
+             alert("今日はめっちゃ良い日やな〜");
+         }else if(result == "500円！！！"){
+             alert("ちょうどええ金額やな〜")
+         }else {
+             alert("今日は控えめやな〜")
+         }
+     })
+ </script>
+ <%= @cdate %>
+</div> 
