@@ -1,0 +1,27 @@
+.omikuji-btn {
+    width: 120px;
+    text-align: center;
+    border-radius: 4%;
+    bottom: 32px;
+    right: 32px;
+    position: center;
+    padding: 15px;
+}
+  
+.omikuji-btn-text {
+    color:blue;
+    display: block;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.chokinomikuji-btn {
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    background-color: honeydew;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
