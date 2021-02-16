@@ -1,6 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  ActionCable.server.config.disable_request_forgery_protection = true
+  config.action_cable.url = "wss://chokinomikuji.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://chokinomikuji.herokuapp.com', 'http://chokinomikuji.herokuapp.com']
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -17,10 +21,7 @@ Rails.application.configure do
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
-
-  ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "wss://chokinomikuji.herokuapp.com/cable" 
-  config.action_cable.allowed_request_origins = ['https://chokinomikuji.herokuapp.com', 'http://chokinomikuji.herokuapp.com']
+  
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
