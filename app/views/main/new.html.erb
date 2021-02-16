@@ -2,8 +2,8 @@
     <%= image_tag "buta_san.png", class:"list-pict" %>
 </div>
 <button class='chokinomikuji-btn', id="btn">おみくじスタート</button>  
-  <%= link_to("/main/#{current_user.id}", class: 'chokinomikuji-btn') do %>
-     <button class='chokijiomikuji-btn'>結果入力</button>
+  <%= link_to(blogs_path, class: 'chokinomikuji-btn') do %>
+     <button class='chokijiomikuji-btn'>貯金記録入力</button>
   <%end%>
 <div id="disp"></div>  
 

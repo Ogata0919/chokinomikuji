@@ -8,9 +8,6 @@ class MainController < ApplicationController
     @cdate = Date.today
   end
 
-  def show
-    @name = current_user.name
-  end
   private
 
   def move_to_index
