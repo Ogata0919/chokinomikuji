@@ -66,6 +66,7 @@
 ### ・ユーザー同士で競えるようにランキング機能をつける（中長期的な目標）
 
 ## データベース設計 	
-[![Image from Gyazo](https://i.gyazo.com/64cb2568057944c70553ba9ee7981435.png)](https://gyazo.com/64cb2568057944c70553ba9ee7981435) 
+[![Image from Gyazo](https://i.gyazo.com/ab52bcfac4acb7de7bb49651315fb7be.png)](https://gyazo.com/ab52bcfac4acb7de7bb49651315fb7be)
+
 ## ローカルでの動作方法	
 ### ogatakazuya@ogatakazuyanoMacBook-Pro cd chokinomikuji 
