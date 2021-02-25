@@ -5,8 +5,6 @@
 |name|string|null:false|
 |email|string|null:false|
 
-### Association
-- has_many : blog
 
 ## Brogs Tabel
 
@@ -15,10 +13,6 @@
 |title|string|null: false|
 |content|text|
 |start_time|datetime|
-|users|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to : user
 
 
 ## Messages Tabel
