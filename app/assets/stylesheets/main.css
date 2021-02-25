@@ -29,20 +29,6 @@ a {
     line-height: 40px;
 }
   
-.store-btn {
-    display: flex;
-    margin-top: 24px;
-}
-  
-.apple-btn {
-    margin-right: 1vw;
-    height: 9vh;
-}
-  
-.google-btn {
-    height: 9vh;
-}
-
 .second-contents{
     text-align: center;
     font-size: 3.5vh;
