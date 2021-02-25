@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_blog, only: [:edit, :show, :update, :destroy]
   def index
     @blogs = Blog.all
@@ -13,35 +13,30 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @blog = Blog.new(blog_parameter)
-    if @blog.save
-      redirect_to blogs_path
-    else
-      render :new
-    end
+    Blog.create(blog_parameter)
+    redirect_to blogs_path
   end
 
   def destroy
-    @blog.destroy if current_user.id == @blog.user_id
+    @blog.destroy
     redirect_to blogs_path, notice:"削除しました"
   end
 
   def edit
-    return redirect_to blogs_path if current_user.id != @blog.user.id
   end
 
   def update
     if @blog.update(blog_parameter)
       redirect_to blogs_path, notice: "編集しました"
     else
-      render :edit
+      render edit
     end
   end
 
   private
 
   def blog_parameter
-    params.require(:blog).permit(:title, :content, :start_time).merge(user_id: current_user.id)
+    params.require(:blog).permit(:title, :content, :start_time)
   end
 
   def set_blog
